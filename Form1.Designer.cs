@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemsForm));
-            splitContainer1 = new SplitContainer();
             pictureBox11 = new PictureBox();
             groupBoxInfo = new GroupBox();
             lblCountDown = new Label();
@@ -63,10 +62,7 @@
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
             myTimer = new System.Windows.Forms.Timer(components);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
+            notifyIcon1 = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             groupBoxInfo.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -82,43 +78,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
-            // splitContainer1
-            // 
-            splitContainer1.BackColor = Color.Transparent;
-            splitContainer1.BackgroundImage = Properties.Resources.th;
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Margin = new Padding(4);
-            splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            splitContainer1.Panel1.BackColor = SystemColors.Info;
-            splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Center;
-            splitContainer1.Panel1.Controls.Add(pictureBox11);
-            splitContainer1.Panel1.Controls.Add(groupBoxInfo);
-            splitContainer1.Panel1.Controls.Add(btnRefresh);
-            splitContainer1.Panel1.Controls.Add(btnDownload);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.AutoScroll = true;
-            splitContainer1.Panel2.Controls.Add(tableLayoutPanel1);
-            splitContainer1.Size = new Size(1561, 1227);
-            splitContainer1.SplitterDistance = 680;
-            splitContainer1.SplitterWidth = 5;
-            splitContainer1.TabIndex = 0;
-            // 
             // pictureBox11
             // 
             pictureBox11.BackColor = Color.Transparent;
             pictureBox11.BackgroundImageLayout = ImageLayout.None;
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
             pictureBox11.InitialImage = (Image)resources.GetObject("pictureBox11.InitialImage");
-            pictureBox11.Location = new Point(3, 3);
+            pictureBox11.Location = new Point(12, 12);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(674, 161);
-            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.Size = new Size(1613, 329);
             pictureBox11.TabIndex = 12;
             pictureBox11.TabStop = false;
             // 
@@ -135,11 +103,11 @@
             groupBoxInfo.FlatStyle = FlatStyle.Popup;
             groupBoxInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             groupBoxInfo.ForeColor = Color.Firebrick;
-            groupBoxInfo.Location = new Point(29, 255);
+            groupBoxInfo.Location = new Point(12, 357);
             groupBoxInfo.Margin = new Padding(4);
             groupBoxInfo.Name = "groupBoxInfo";
             groupBoxInfo.Padding = new Padding(4);
-            groupBoxInfo.Size = new Size(629, 287);
+            groupBoxInfo.Size = new Size(756, 269);
             groupBoxInfo.TabIndex = 11;
             groupBoxInfo.TabStop = false;
             groupBoxInfo.Text = "INFO";
@@ -207,7 +175,7 @@
             // btnRefresh
             // 
             btnRefresh.ForeColor = Color.Firebrick;
-            btnRefresh.Location = new Point(293, 188);
+            btnRefresh.Location = new Point(248, 674);
             btnRefresh.Margin = new Padding(4);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(157, 44);
@@ -219,7 +187,7 @@
             // btnDownload
             // 
             btnDownload.ForeColor = Color.Firebrick;
-            btnDownload.Location = new Point(85, 188);
+            btnDownload.Location = new Point(32, 674);
             btnDownload.Margin = new Padding(4);
             btnDownload.Name = "btnDownload";
             btnDownload.Size = new Size(157, 44);
@@ -232,6 +200,7 @@
             // 
             tableLayoutPanel1.Anchor = AnchorStyles.None;
             tableLayoutPanel1.AutoScroll = true;
+            tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
@@ -255,7 +224,7 @@
             tableLayoutPanel1.Controls.Add(pictureBox8, 1, 8);
             tableLayoutPanel1.Controls.Add(pictureBox9, 1, 9);
             tableLayoutPanel1.Controls.Add(pictureBox10, 1, 10);
-            tableLayoutPanel1.Location = new Point(26, 13);
+            tableLayoutPanel1.Location = new Point(869, 357);
             tableLayoutPanel1.Margin = new Padding(4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 11;
@@ -270,7 +239,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(836, 1473);
+            tableLayoutPanel1.Size = new Size(757, 1473);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // ContinentalUS
@@ -529,6 +498,14 @@
             myTimer.Interval = 300000;
             myTimer.Tick += ItemsForm_Load;
             // 
+            // notifyIcon1
+            // 
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
+            notifyIcon1.Text = "PC Downlink";
+            notifyIcon1.Visible = true;
+            notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            // 
             // ItemsForm
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
@@ -536,20 +513,20 @@
             AutoScroll = true;
             BackColor = SystemColors.Control;
             BackgroundImage = Properties.Resources.th;
-            ClientSize = new Size(1561, 1227);
-            Controls.Add(splitContainer1);
+            ClientSize = new Size(1639, 1118);
+            Controls.Add(groupBoxInfo);
+            Controls.Add(pictureBox11);
+            Controls.Add(btnRefresh);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(btnDownload);
             Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ForeColor = Color.WhiteSmoke;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             MaximizeBox = false;
             Name = "ItemsForm";
-            Opacity = 0.85D;
             Text = "Downlink for the PC";
             Load += ItemsForm_Load;
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             groupBoxInfo.ResumeLayout(false);
             groupBoxInfo.PerformLayout();
@@ -569,8 +546,6 @@
         }
 
         #endregion
-
-        private SplitContainer splitContainer1;
         private TableLayoutPanel tableLayoutPanel1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
@@ -604,5 +579,6 @@
         public RadioButton GOESWestFullDisk;
         private Label lblCountDown;
         private PictureBox pictureBox11;
+        private NotifyIcon notifyIcon1;
     }
 }

@@ -195,6 +195,11 @@ namespace PCDownlink
             //minutes = (milliseconds/1000)/60) resultLabel.Text =
         }
 
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
 
+            this.WindowState = FormWindowState.Normal;
+            this.Show();
+        }
     }
 }
