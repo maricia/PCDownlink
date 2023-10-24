@@ -35,7 +35,6 @@
             lblCurrentTimeText = new Label();
             lblLastrefresh = new Label();
             resultLabel = new Label();
-            progressBar1 = new ProgressBar();
             lblcurrenttime = new Label();
             lbllastwritetime = new Label();
             btnRefresh = new Button();
@@ -112,7 +111,6 @@
             groupBoxInfo.Controls.Add(lblCurrentTimeText);
             groupBoxInfo.Controls.Add(lblLastrefresh);
             groupBoxInfo.Controls.Add(resultLabel);
-            groupBoxInfo.Controls.Add(progressBar1);
             groupBoxInfo.Controls.Add(lblcurrenttime);
             groupBoxInfo.Controls.Add(lbllastwritetime);
             groupBoxInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -121,7 +119,7 @@
             groupBoxInfo.Margin = new Padding(4);
             groupBoxInfo.Name = "groupBoxInfo";
             groupBoxInfo.Padding = new Padding(4);
-            groupBoxInfo.Size = new Size(629, 546);
+            groupBoxInfo.Size = new Size(629, 287);
             groupBoxInfo.TabIndex = 11;
             groupBoxInfo.TabStop = false;
             groupBoxInfo.Text = "INFO";
@@ -165,16 +163,6 @@
             resultLabel.Size = new Size(83, 32);
             resultLabel.TabIndex = 6;
             resultLabel.Text = "label1";
-            // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(20, 426);
-            progressBar1.Margin = new Padding(4);
-            progressBar1.Maximum = 300000;
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(575, 44);
-            progressBar1.Step = 100;
-            progressBar1.TabIndex = 7;
             // 
             // lblcurrenttime
             // 
@@ -222,7 +210,8 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.Anchor = AnchorStyles.None;
+            tableLayoutPanel1.AutoScroll = true;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
@@ -246,7 +235,7 @@
             tableLayoutPanel1.Controls.Add(pictureBox8, 1, 8);
             tableLayoutPanel1.Controls.Add(pictureBox9, 1, 9);
             tableLayoutPanel1.Controls.Add(pictureBox10, 1, 10);
-            tableLayoutPanel1.Location = new Point(24, 13);
+            tableLayoutPanel1.Location = new Point(26, 13);
             tableLayoutPanel1.Margin = new Padding(4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 11;
@@ -261,7 +250,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(823, 1214);
+            tableLayoutPanel1.Size = new Size(836, 1473);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // ContinentalUS
