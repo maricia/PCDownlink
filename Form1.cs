@@ -29,7 +29,7 @@ namespace PCDownlink
             ImageDownloader.DownloadImage(imageLocation);
             Wallpaper.Set(myPath);
             StartTimer();
-            
+
         }
 
         private void StartTimer()
@@ -43,12 +43,13 @@ namespace PCDownlink
             resultLabel.Text = "";
             this.myTimer.Tick += new System.EventHandler(this.myTimer_Tick);
             //throw new NotImplementedException();
-            
+
         }
         private void CountDown()
         {
-            if (counter != 1) { 
-               // lblCountDown.Text = "Time: " + (stopwatch.ElapsedMilliseconds / 1000).ToString();
+            if (counter != 1)
+            {
+                // lblCountDown.Text = "Time: " + (stopwatch.ElapsedMilliseconds / 1000).ToString();
                 lblCountDown.Text = string.Format("{0:hh\\:mm\\:ss\\.ff}", stopwatch.Elapsed);
                 //string.Format("{0:hh\\:mm\\:ss\\.ff}", stopwatch.ElapsedMilliseconds /1000 );
             }
@@ -189,7 +190,7 @@ namespace PCDownlink
         }
         private void fillInLabels()
         {
-            lbllastwritetime.Text = File.GetLastWriteTime(myPath).ToString();
+            lbllastwritetime.Text = string.Format( "{0:hh\\:mm\\:ss\\.ff}", File.GetLastWriteTime(myPath).ToString());//;
             lblcurrenttime.Text = DateTime.Now.ToString();
             //minutes = (milliseconds/1000)/60) resultLabel.Text =
         }

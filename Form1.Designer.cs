@@ -82,8 +82,11 @@
             // 
             // splitContainer1
             // 
+            splitContainer1.BackColor = Color.Transparent;
+            splitContainer1.BackgroundImage = Properties.Resources.th;
             splitContainer1.Dock = DockStyle.Fill;
             splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Margin = new Padding(4);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -96,12 +99,15 @@
             // 
             splitContainer1.Panel2.AutoScroll = true;
             splitContainer1.Panel2.Controls.Add(tableLayoutPanel1);
-            splitContainer1.Size = new Size(1138, 1345);
-            splitContainer1.SplitterDistance = 497;
+            splitContainer1.Size = new Size(1561, 1227);
+            splitContainer1.SplitterDistance = 680;
+            splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 0;
             // 
             // groupBoxInfo
             // 
+            groupBoxInfo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBoxInfo.BackColor = Color.Transparent;
             groupBoxInfo.Controls.Add(lblCountDown);
             groupBoxInfo.Controls.Add(lblCurrentTimeText);
             groupBoxInfo.Controls.Add(lblLastrefresh);
@@ -109,81 +115,94 @@
             groupBoxInfo.Controls.Add(progressBar1);
             groupBoxInfo.Controls.Add(lblcurrenttime);
             groupBoxInfo.Controls.Add(lbllastwritetime);
-            groupBoxInfo.Location = new Point(26, 192);
+            groupBoxInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBoxInfo.ForeColor = Color.Firebrick;
+            groupBoxInfo.Location = new Point(37, 246);
+            groupBoxInfo.Margin = new Padding(4);
             groupBoxInfo.Name = "groupBoxInfo";
-            groupBoxInfo.Size = new Size(457, 398);
+            groupBoxInfo.Padding = new Padding(4);
+            groupBoxInfo.Size = new Size(629, 546);
             groupBoxInfo.TabIndex = 11;
             groupBoxInfo.TabStop = false;
-            groupBoxInfo.Text = "Info";
+            groupBoxInfo.Text = "INFO";
             // 
             // lblCountDown
             // 
             lblCountDown.AutoSize = true;
-            lblCountDown.Location = new Point(15, 167);
+            lblCountDown.Location = new Point(20, 214);
+            lblCountDown.Margin = new Padding(4, 0, 4, 0);
             lblCountDown.Name = "lblCountDown";
-            lblCountDown.Size = new Size(104, 25);
+            lblCountDown.Size = new Size(147, 32);
             lblCountDown.TabIndex = 11;
             lblCountDown.Text = "00:00:00.00";
             // 
             // lblCurrentTimeText
             // 
             lblCurrentTimeText.AutoSize = true;
-            lblCurrentTimeText.Location = new Point(15, 32);
+            lblCurrentTimeText.Location = new Point(20, 41);
+            lblCurrentTimeText.Margin = new Padding(4, 0, 4, 0);
             lblCurrentTimeText.Name = "lblCurrentTimeText";
-            lblCurrentTimeText.Size = new Size(50, 25);
+            lblCurrentTimeText.Size = new Size(70, 32);
             lblCurrentTimeText.TabIndex = 9;
             lblCurrentTimeText.Text = "Time";
             // 
             // lblLastrefresh
             // 
             lblLastrefresh.AutoSize = true;
-            lblLastrefresh.Location = new Point(256, 27);
+            lblLastrefresh.Location = new Point(320, 35);
+            lblLastrefresh.Margin = new Padding(4, 0, 4, 0);
             lblLastrefresh.Name = "lblLastrefresh";
-            lblLastrefresh.Size = new Size(102, 25);
+            lblLastrefresh.Size = new Size(146, 32);
             lblLastrefresh.TabIndex = 10;
             lblLastrefresh.Text = "Last refresh";
             // 
             // resultLabel
             // 
             resultLabel.AutoSize = true;
-            resultLabel.Location = new Point(15, 123);
+            resultLabel.Location = new Point(20, 157);
+            resultLabel.Margin = new Padding(4, 0, 4, 0);
             resultLabel.Name = "resultLabel";
-            resultLabel.Size = new Size(59, 25);
+            resultLabel.Size = new Size(83, 32);
             resultLabel.TabIndex = 6;
             resultLabel.Text = "label1";
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(15, 333);
+            progressBar1.Location = new Point(20, 426);
+            progressBar1.Margin = new Padding(4);
             progressBar1.Maximum = 300000;
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(411, 34);
+            progressBar1.Size = new Size(575, 44);
             progressBar1.Step = 100;
             progressBar1.TabIndex = 7;
             // 
             // lblcurrenttime
             // 
             lblcurrenttime.AutoSize = true;
-            lblcurrenttime.Location = new Point(15, 68);
+            lblcurrenttime.Location = new Point(20, 87);
+            lblcurrenttime.Margin = new Padding(4, 0, 4, 0);
             lblcurrenttime.Name = "lblcurrenttime";
-            lblcurrenttime.Size = new Size(59, 25);
+            lblcurrenttime.Size = new Size(83, 32);
             lblcurrenttime.TabIndex = 3;
             lblcurrenttime.Text = "label1";
             // 
             // lbllastwritetime
             // 
             lbllastwritetime.AutoSize = true;
-            lbllastwritetime.Location = new Point(256, 68);
+            lbllastwritetime.Location = new Point(320, 87);
+            lbllastwritetime.Margin = new Padding(4, 0, 4, 0);
             lbllastwritetime.Name = "lbllastwritetime";
-            lbllastwritetime.Size = new Size(59, 25);
+            lbllastwritetime.Size = new Size(83, 32);
             lbllastwritetime.TabIndex = 2;
             lbllastwritetime.Text = "label1";
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(72, 106);
+            btnRefresh.ForeColor = Color.Firebrick;
+            btnRefresh.Location = new Point(101, 136);
+            btnRefresh.Margin = new Padding(4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(112, 34);
+            btnRefresh.Size = new Size(157, 44);
             btnRefresh.TabIndex = 1;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -191,9 +210,11 @@
             // 
             // btnDownload
             // 
-            btnDownload.Location = new Point(72, 50);
+            btnDownload.ForeColor = Color.Firebrick;
+            btnDownload.Location = new Point(101, 64);
+            btnDownload.Margin = new Padding(4);
             btnDownload.Name = "btnDownload";
-            btnDownload.Size = new Size(112, 34);
+            btnDownload.Size = new Size(157, 44);
             btnDownload.TabIndex = 0;
             btnDownload.Text = "Download";
             btnDownload.UseVisualStyleBackColor = true;
@@ -201,6 +222,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
@@ -224,7 +246,8 @@
             tableLayoutPanel1.Controls.Add(pictureBox8, 1, 8);
             tableLayoutPanel1.Controls.Add(pictureBox9, 1, 9);
             tableLayoutPanel1.Controls.Add(pictureBox10, 1, 10);
-            tableLayoutPanel1.Location = new Point(29, 3);
+            tableLayoutPanel1.Location = new Point(24, 13);
+            tableLayoutPanel1.Margin = new Padding(4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 11;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
@@ -238,17 +261,18 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(959, 1683);
+            tableLayoutPanel1.Size = new Size(823, 1214);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // ContinentalUS
             // 
             ContinentalUS.AutoSize = true;
             ContinentalUS.Checked = true;
-            ContinentalUS.Dock = DockStyle.Fill;
-            ContinentalUS.Location = new Point(3, 3);
+            ContinentalUS.Dock = DockStyle.Right;
+            ContinentalUS.Location = new Point(114, 4);
+            ContinentalUS.Margin = new Padding(4);
             ContinentalUS.Name = "ContinentalUS";
-            ContinentalUS.Size = new Size(230, 168);
+            ContinentalUS.Size = new Size(209, 215);
             ContinentalUS.TabIndex = 0;
             ContinentalUS.TabStop = true;
             ContinentalUS.Text = "Continental US";
@@ -258,10 +282,11 @@
             // TropicalAtlantic
             // 
             TropicalAtlantic.AutoSize = true;
-            TropicalAtlantic.Dock = DockStyle.Fill;
-            TropicalAtlantic.Location = new Point(3, 177);
+            TropicalAtlantic.Dock = DockStyle.Right;
+            TropicalAtlantic.Location = new Point(97, 227);
+            TropicalAtlantic.Margin = new Padding(4);
             TropicalAtlantic.Name = "TropicalAtlantic";
-            TropicalAtlantic.Size = new Size(230, 151);
+            TropicalAtlantic.Size = new Size(226, 193);
             TropicalAtlantic.TabIndex = 1;
             TropicalAtlantic.TabStop = true;
             TropicalAtlantic.Text = "Tropical Atlantic";
@@ -271,10 +296,11 @@
             // TropicalPacific
             // 
             TropicalPacific.AutoSize = true;
-            TropicalPacific.Dock = DockStyle.Fill;
-            TropicalPacific.Location = new Point(3, 334);
+            TropicalPacific.Dock = DockStyle.Right;
+            TropicalPacific.Location = new Point(112, 428);
+            TropicalPacific.Margin = new Padding(4);
             TropicalPacific.Name = "TropicalPacific";
-            TropicalPacific.Size = new Size(230, 147);
+            TropicalPacific.Size = new Size(211, 188);
             TropicalPacific.TabIndex = 2;
             TropicalPacific.TabStop = true;
             TropicalPacific.Text = "Tropical Pacific";
@@ -284,10 +310,11 @@
             // USWestCoast
             // 
             USWestCoast.AutoSize = true;
-            USWestCoast.Dock = DockStyle.Fill;
-            USWestCoast.Location = new Point(3, 487);
+            USWestCoast.Dock = DockStyle.Right;
+            USWestCoast.Location = new Point(121, 624);
+            USWestCoast.Margin = new Padding(4);
             USWestCoast.Name = "USWestCoast";
-            USWestCoast.Size = new Size(230, 156);
+            USWestCoast.Size = new Size(202, 200);
             USWestCoast.TabIndex = 3;
             USWestCoast.TabStop = true;
             USWestCoast.Text = "US West Coast";
@@ -297,10 +324,11 @@
             // NorthernSouthAmerica
             // 
             NorthernSouthAmerica.AutoSize = true;
-            NorthernSouthAmerica.Dock = DockStyle.Fill;
-            NorthernSouthAmerica.Location = new Point(3, 649);
+            NorthernSouthAmerica.Dock = DockStyle.Right;
+            NorthernSouthAmerica.Location = new Point(4, 832);
+            NorthernSouthAmerica.Margin = new Padding(4);
             NorthernSouthAmerica.Name = "NorthernSouthAmerica";
-            NorthernSouthAmerica.Size = new Size(230, 135);
+            NorthernSouthAmerica.Size = new Size(319, 173);
             NorthernSouthAmerica.TabIndex = 4;
             NorthernSouthAmerica.TabStop = true;
             NorthernSouthAmerica.Text = "Northern South America";
@@ -310,10 +338,11 @@
             // SouthernSouthAmerica
             // 
             SouthernSouthAmerica.AutoSize = true;
-            SouthernSouthAmerica.Dock = DockStyle.Fill;
-            SouthernSouthAmerica.Location = new Point(3, 790);
+            SouthernSouthAmerica.Dock = DockStyle.Right;
+            SouthernSouthAmerica.Location = new Point(6, 1013);
+            SouthernSouthAmerica.Margin = new Padding(4);
             SouthernSouthAmerica.Name = "SouthernSouthAmerica";
-            SouthernSouthAmerica.Size = new Size(230, 138);
+            SouthernSouthAmerica.Size = new Size(317, 177);
             SouthernSouthAmerica.TabIndex = 5;
             SouthernSouthAmerica.TabStop = true;
             SouthernSouthAmerica.Text = "Southern South America";
@@ -323,10 +352,11 @@
             // Himawari8FullDisk
             // 
             Himawari8FullDisk.AutoSize = true;
-            Himawari8FullDisk.Dock = DockStyle.Fill;
-            Himawari8FullDisk.Location = new Point(3, 934);
+            Himawari8FullDisk.Dock = DockStyle.Right;
+            Himawari8FullDisk.Location = new Point(64, 1198);
+            Himawari8FullDisk.Margin = new Padding(4);
             Himawari8FullDisk.Name = "Himawari8FullDisk";
-            Himawari8FullDisk.Size = new Size(230, 176);
+            Himawari8FullDisk.Size = new Size(259, 225);
             Himawari8FullDisk.TabIndex = 6;
             Himawari8FullDisk.TabStop = true;
             Himawari8FullDisk.Text = "Himawari8 FullDisk";
@@ -337,9 +367,10 @@
             // 
             NorthernPacific.AutoSize = true;
             NorthernPacific.Dock = DockStyle.Fill;
-            NorthernPacific.Location = new Point(3, 1116);
+            NorthernPacific.Location = new Point(4, 1431);
+            NorthernPacific.Margin = new Padding(4);
             NorthernPacific.Name = "NorthernPacific";
-            NorthernPacific.Size = new Size(230, 132);
+            NorthernPacific.Size = new Size(319, 169);
             NorthernPacific.TabIndex = 7;
             NorthernPacific.TabStop = true;
             NorthernPacific.Text = "Northern Pacific";
@@ -350,9 +381,10 @@
             // 
             GOESEastFullDisk.AutoSize = true;
             GOESEastFullDisk.Dock = DockStyle.Fill;
-            GOESEastFullDisk.Location = new Point(3, 1254);
+            GOESEastFullDisk.Location = new Point(4, 1608);
+            GOESEastFullDisk.Margin = new Padding(4);
             GOESEastFullDisk.Name = "GOESEastFullDisk";
-            GOESEastFullDisk.Size = new Size(230, 193);
+            GOESEastFullDisk.Size = new Size(319, 247);
             GOESEastFullDisk.TabIndex = 8;
             GOESEastFullDisk.TabStop = true;
             GOESEastFullDisk.Text = "GOES-East FullDisk";
@@ -363,9 +395,10 @@
             // 
             GOESWestFullDisk.AutoSize = true;
             GOESWestFullDisk.Dock = DockStyle.Fill;
-            GOESWestFullDisk.Location = new Point(3, 1453);
+            GOESWestFullDisk.Location = new Point(4, 1863);
+            GOESWestFullDisk.Margin = new Padding(4);
             GOESWestFullDisk.Name = "GOESWestFullDisk";
-            GOESWestFullDisk.Size = new Size(230, 227);
+            GOESWestFullDisk.Size = new Size(319, 232);
             GOESWestFullDisk.TabIndex = 9;
             GOESWestFullDisk.TabStop = true;
             GOESWestFullDisk.Text = "GOES-West FullDisk";
@@ -375,9 +408,10 @@
             // pictureBox1
             // 
             pictureBox1.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/CONUS/GEOCOLOR/thumbnail.jpg";
-            pictureBox1.Location = new Point(239, 3);
+            pictureBox1.Location = new Point(331, 4);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(243, 168);
+            pictureBox1.Size = new Size(340, 215);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -385,9 +419,10 @@
             // pictureBox2
             // 
             pictureBox2.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/SECTOR/taw/GEOCOLOR/thumbnail.jpg";
-            pictureBox2.Location = new Point(239, 177);
+            pictureBox2.Location = new Point(331, 227);
+            pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(243, 151);
+            pictureBox2.Size = new Size(340, 193);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
@@ -395,9 +430,10 @@
             // pictureBox3
             // 
             pictureBox3.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES17/ABI/SECTOR/tpw/GEOCOLOR/thumbnail.jpg";
-            pictureBox3.Location = new Point(239, 334);
+            pictureBox3.Location = new Point(331, 428);
+            pictureBox3.Margin = new Padding(4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(243, 147);
+            pictureBox3.Size = new Size(340, 188);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
@@ -405,9 +441,10 @@
             // pictureBox4
             // 
             pictureBox4.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES17/ABI/CONUS/GEOCOLOR/thumbnail.jpg";
-            pictureBox4.Location = new Point(239, 487);
+            pictureBox4.Location = new Point(331, 624);
+            pictureBox4.Margin = new Padding(4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(243, 156);
+            pictureBox4.Size = new Size(340, 200);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 13;
             pictureBox4.TabStop = false;
@@ -415,9 +452,10 @@
             // pictureBox5
             // 
             pictureBox5.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/SECTOR/nsa/GEOCOLOR/thumbnail.jpg";
-            pictureBox5.Location = new Point(239, 649);
+            pictureBox5.Location = new Point(331, 832);
+            pictureBox5.Margin = new Padding(4);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(233, 135);
+            pictureBox5.Size = new Size(326, 173);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 14;
             pictureBox5.TabStop = false;
@@ -425,9 +463,10 @@
             // pictureBox6
             // 
             pictureBox6.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/SECTOR/ssa/GEOCOLOR/thumbnail.jpg";
-            pictureBox6.Location = new Point(239, 790);
+            pictureBox6.Location = new Point(331, 1013);
+            pictureBox6.Margin = new Padding(4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(233, 138);
+            pictureBox6.Size = new Size(326, 177);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 15;
             pictureBox6.TabStop = false;
@@ -435,9 +474,10 @@
             // pictureBox7
             // 
             pictureBox7.ImageLocation = "http://rammb.cira.colostate.edu/ramsdis/online/images/thumb/himawari-8/full_disk_ahi_true_color.jpg";
-            pictureBox7.Location = new Point(239, 934);
+            pictureBox7.Location = new Point(331, 1198);
+            pictureBox7.Margin = new Padding(4);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(175, 176);
+            pictureBox7.Size = new Size(244, 225);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 16;
             pictureBox7.TabStop = false;
@@ -445,9 +485,10 @@
             // pictureBox8
             // 
             pictureBox8.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES17/ABI/SECTOR/np/GEOCOLOR/thumbnail.jpg";
-            pictureBox8.Location = new Point(239, 1116);
+            pictureBox8.Location = new Point(331, 1431);
+            pictureBox8.Margin = new Padding(4);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(224, 132);
+            pictureBox8.Size = new Size(313, 169);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 17;
             pictureBox8.TabStop = false;
@@ -455,9 +496,10 @@
             // pictureBox9
             // 
             pictureBox9.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/thumbnail.jpg";
-            pictureBox9.Location = new Point(239, 1254);
+            pictureBox9.Location = new Point(331, 1608);
+            pictureBox9.Margin = new Padding(4);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(194, 193);
+            pictureBox9.Size = new Size(271, 247);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 18;
             pictureBox9.TabStop = false;
@@ -465,9 +507,10 @@
             // pictureBox10
             // 
             pictureBox10.ImageLocation = "https://cdn.star.nesdis.noaa.gov/GOES17/ABI/FD/GEOCOLOR/thumbnail.jpg";
-            pictureBox10.Location = new Point(239, 1453);
+            pictureBox10.Location = new Point(331, 1863);
+            pictureBox10.Margin = new Padding(4);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(187, 181);
+            pictureBox10.Size = new Size(262, 232);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 19;
             pictureBox10.TabStop = false;
@@ -479,12 +522,19 @@
             // 
             // ItemsForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1138, 1345);
+            AutoScroll = true;
+            BackColor = SystemColors.Control;
+            BackgroundImage = Properties.Resources.th;
+            ClientSize = new Size(1561, 1227);
             Controls.Add(splitContainer1);
+            Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ForeColor = Color.WhiteSmoke;
+            Margin = new Padding(4);
             MaximizeBox = false;
             Name = "ItemsForm";
+            Opacity = 0.85D;
             Text = "Downlink for the PC";
             Load += ItemsForm_Load;
             splitContainer1.Panel1.ResumeLayout(false);
