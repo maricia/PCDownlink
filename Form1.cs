@@ -190,7 +190,7 @@ namespace PCDownlink
         }
         private void fillInLabels()
         {
-            lbllastwritetime.Text = string.Format( "{0:hh\\:mm\\:ss\\.ff}", File.GetLastWriteTime(myPath).ToString());//;
+            lbllastwritetime.Text = string.Format("{0:hh\\:mm\\:ss\\.ff}", File.GetLastWriteTime(myPath).ToString());//;
             lblcurrenttime.Text = DateTime.Now.ToString();
             //minutes = (milliseconds/1000)/60) resultLabel.Text =
         }

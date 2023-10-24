@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemsForm));
             splitContainer1 = new SplitContainer();
+            pictureBox11 = new PictureBox();
             groupBoxInfo = new GroupBox();
             lblCountDown = new Label();
             lblCurrentTimeText = new Label();
             lblLastrefresh = new Label();
             resultLabel = new Label();
-            progressBar1 = new ProgressBar();
             lblcurrenttime = new Label();
             lbllastwritetime = new Label();
             btnRefresh = new Button();
@@ -66,6 +67,7 @@
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             groupBoxInfo.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -91,6 +93,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.BackColor = SystemColors.Info;
+            splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Center;
+            splitContainer1.Panel1.Controls.Add(pictureBox11);
             splitContainer1.Panel1.Controls.Add(groupBoxInfo);
             splitContainer1.Panel1.Controls.Add(btnRefresh);
             splitContainer1.Panel1.Controls.Add(btnDownload);
@@ -104,6 +109,19 @@
             splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 0;
             // 
+            // pictureBox11
+            // 
+            pictureBox11.BackColor = Color.Transparent;
+            pictureBox11.BackgroundImageLayout = ImageLayout.None;
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.InitialImage = (Image)resources.GetObject("pictureBox11.InitialImage");
+            pictureBox11.Location = new Point(3, 3);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(674, 161);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 12;
+            pictureBox11.TabStop = false;
+            // 
             // groupBoxInfo
             // 
             groupBoxInfo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -112,16 +130,16 @@
             groupBoxInfo.Controls.Add(lblCurrentTimeText);
             groupBoxInfo.Controls.Add(lblLastrefresh);
             groupBoxInfo.Controls.Add(resultLabel);
-            groupBoxInfo.Controls.Add(progressBar1);
             groupBoxInfo.Controls.Add(lblcurrenttime);
             groupBoxInfo.Controls.Add(lbllastwritetime);
+            groupBoxInfo.FlatStyle = FlatStyle.Popup;
             groupBoxInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             groupBoxInfo.ForeColor = Color.Firebrick;
-            groupBoxInfo.Location = new Point(37, 246);
+            groupBoxInfo.Location = new Point(29, 255);
             groupBoxInfo.Margin = new Padding(4);
             groupBoxInfo.Name = "groupBoxInfo";
             groupBoxInfo.Padding = new Padding(4);
-            groupBoxInfo.Size = new Size(629, 546);
+            groupBoxInfo.Size = new Size(629, 287);
             groupBoxInfo.TabIndex = 11;
             groupBoxInfo.TabStop = false;
             groupBoxInfo.Text = "INFO";
@@ -166,16 +184,6 @@
             resultLabel.TabIndex = 6;
             resultLabel.Text = "label1";
             // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(20, 426);
-            progressBar1.Margin = new Padding(4);
-            progressBar1.Maximum = 300000;
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(575, 44);
-            progressBar1.Step = 100;
-            progressBar1.TabIndex = 7;
-            // 
             // lblcurrenttime
             // 
             lblcurrenttime.AutoSize = true;
@@ -199,7 +207,7 @@
             // btnRefresh
             // 
             btnRefresh.ForeColor = Color.Firebrick;
-            btnRefresh.Location = new Point(101, 136);
+            btnRefresh.Location = new Point(293, 188);
             btnRefresh.Margin = new Padding(4);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(157, 44);
@@ -211,7 +219,7 @@
             // btnDownload
             // 
             btnDownload.ForeColor = Color.Firebrick;
-            btnDownload.Location = new Point(101, 64);
+            btnDownload.Location = new Point(85, 188);
             btnDownload.Margin = new Padding(4);
             btnDownload.Name = "btnDownload";
             btnDownload.Size = new Size(157, 44);
@@ -222,7 +230,8 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.Anchor = AnchorStyles.None;
+            tableLayoutPanel1.AutoScroll = true;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
@@ -246,7 +255,7 @@
             tableLayoutPanel1.Controls.Add(pictureBox8, 1, 8);
             tableLayoutPanel1.Controls.Add(pictureBox9, 1, 9);
             tableLayoutPanel1.Controls.Add(pictureBox10, 1, 10);
-            tableLayoutPanel1.Location = new Point(24, 13);
+            tableLayoutPanel1.Location = new Point(26, 13);
             tableLayoutPanel1.Margin = new Padding(4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 11;
@@ -261,7 +270,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(823, 1214);
+            tableLayoutPanel1.Size = new Size(836, 1473);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // ContinentalUS
@@ -541,6 +550,7 @@
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             groupBoxInfo.ResumeLayout(false);
             groupBoxInfo.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
@@ -593,5 +603,6 @@
         public RadioButton GOESEastFullDisk;
         public RadioButton GOESWestFullDisk;
         private Label lblCountDown;
+        private PictureBox pictureBox11;
     }
 }
